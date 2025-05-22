@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loan Ledger Software</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <body class="bg-gray-100 min-h-screen">
+        <div class="container mx-auto py-8">
+            <h1 class="text-3xl font-bold mb-6 text-center">Loan Ledger Software</h1>
+            <form id="loanForm" class="bg-white p-6 rounded shadow mb-8 flex flex-wrap gap-4 items-end">
+                <input type="text" id="borrower" placeholder="Borrower" class="border p-2 rounded flex-1" required>
+                <input type="number" id="amount" placeholder="Amount" class="border p-2 rounded flex-1" required>
+                <input type="number" id="interest" placeholder="Interest (%)" class="border p-2 rounded flex-1"
+                    required>
+                <input type="date" id="dueDate" class="border p-2 rounded flex-1" required>
+                <select id="status" class="border p-2 rounded flex-1">
+                    <option value="Pending">Pending</option>
+                    <option value="Paid">Paid</option>
+                </select>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Loan</button>
+            </form>
+            <div class="bg-white rounded shadow p-6">
+                <table class="min-w-full table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Borrower</th>
+                            <th class="px-4 py-2">Amount</th>
+                            <th class="px-4 py-2">Interest</th>
+                            <th class="px-4 py-2">Due Date</th>
+                            <th class="px-4 py-2">Status</th>
+                            <th class="px-4 py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="loanTableBody">
+                        <!-- Dynamic rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+
+</html>
